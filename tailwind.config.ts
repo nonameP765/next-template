@@ -17,7 +17,22 @@ const config: Config = {
   },
   plugins: [
     // eslint-disable-next-line global-require
-    require('./styles/plugins/typography.ts'),
+    require('twind-simple-typography')({
+      fontFamilyMap: {
+        'pretendard-normal': {
+          weight: 400,
+          family: '"Pretendard", sans-serif',
+        },
+        'pretendard-bold': {
+          weight: 700,
+          family: '"Pretendard", sans-serif',
+        },
+      },
+      fontSizeList: [
+        80, 60, 40, 35, 30, 28, 25, 22, 20, 18, 15, 13, 12, 11, 10,
+      ],
+      lineHeightList: [130, 160],
+    }),
   ],
 };
 export default config;
